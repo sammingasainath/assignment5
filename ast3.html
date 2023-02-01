@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <style>
+      li {
+        font-size: 16px;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="incrementCount()">Increment</button>
+    <ul id="counts"></ul>
+    <script>
+      var count = 0;
+      function incrementCount() {
+        count++;
+        var newCount = document.createElement("li");
+        newCount.innerHTML = count;
+        newCount.style.fontSize = count + 16 + "px";
+        document.getElementById("counts").appendChild(newCount);
+      }
+    </script>
+  </body>
+</html>

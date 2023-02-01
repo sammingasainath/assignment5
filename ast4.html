@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <table id="table">
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+    <script>
+      function addRow() {
+        var table = document.getElementById("table");
+        var lastRow = table.lastChild;
+        var secondToLastRow = lastRow.previousSibling;
+        var sum = parseInt(lastRow.firstChild.innerText) + parseInt(secondToLastRow.firstChild.innerText);
+
+        var newRow = document.createElement("tr");
+        var newCell = document.createElement("td");
+        newCell.innerText = sum;
+        newRow.appendChild(newCell);
+        table.appendChild(newRow);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <style>
+      #rotate {
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="hello">Hello</h2>
+    <input type="text" id="input">
+    <button onclick="updateText()">Update</button>
+    <script>
+      function updateText() {
+        var input = document.getElementById("input").value;
+        document.getElementById("hello").innerHTML = input;
+        document.getElementById('hello').id = 'rotate';
+      }
+    </script>
+  </body>
+</html>
